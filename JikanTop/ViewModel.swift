@@ -29,8 +29,10 @@ final class ViewModel {
                 state.selectedSubType.map { _ in }
             )
             .debounce(.microseconds(100), scheduler: MainScheduler.instance)
-            .map { _ in 1 }
-            .bind(to: state.lastPage)
+            .bind(with: self) { `self`, _ in
+                self.state.items.accept([])
+                self.state.lastPage.accept(1)
+            }
             .disposed(by: bag)
 
         state.selectedType
@@ -62,7 +64,7 @@ final class ViewModel {
         .subscribe(
             with: self,
             onSuccess: { `self`, items in
-                self.state.items.accept(items)
+                self.state.items.accept(self.state.items.value + items)
             },
             onFailure: { _, error in
                 print(error)
@@ -81,7 +83,7 @@ final class ViewModel {
 extension ViewModel {
     struct State {
         let items = BehaviorRelay<[TopItem]>(value: [])
-        let lastPage = BehaviorRelay<Int>(value: 0)
+        let lastPage = BehaviorRelay<Int>(value: 1)
         let selectedType = BehaviorRelay<ItemType>(value: .anime)
         let selectedSubType = BehaviorRelay<ItemSubtype?>(value: nil)
     }

@@ -19,6 +19,10 @@ final class ViewController: UIViewController {
 
     typealias Section = SectionModel<Void, TopItem>
 
+    enum Constants {
+        static let pageCount = 50
+    }
+
     let viewModel = ViewModel()
 
     override func viewDidLoad() {
@@ -117,6 +121,13 @@ final class ViewController: UIViewController {
                 }
                 self.present(sheet, animated: true)
             }
+            .disposed(by: rx.disposeBag)
+
+        tableView.rx.willDisplayCell
+            .withLatestFrom(viewModel.state.lastPage) { cell, page in (cell.indexPath.row, page) }
+            .filter { $0 == (Constants.pageCount * $1)  - 1 }
+            .map { _ in }
+            .bind(to: viewModel.event.didScrollBottom)
             .disposed(by: rx.disposeBag)
     }
 
