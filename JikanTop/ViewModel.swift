@@ -40,7 +40,7 @@ final class ViewModel {
             .bind(to: state.selectedSubType)
             .disposed(by: bag)
 
-        state.lastPage
+        state.lastPage.skip(1)
             .bind(with: self) { `self`, page in
                 self.fetchItems(at: page)
             }

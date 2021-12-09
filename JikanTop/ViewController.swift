@@ -125,7 +125,7 @@ final class ViewController: UIViewController {
 
         tableView.rx.willDisplayCell
             .withLatestFrom(viewModel.state.lastPage) { cell, page in (cell.indexPath.row, page) }
-            .filter { $0 == (Constants.pageCount * $1)  - 1 }
+            .filter { $0 == (Constants.pageCount * $1) - 1 }
             .map { _ in }
             .bind(to: viewModel.event.didScrollBottom)
             .disposed(by: rx.disposeBag)
@@ -134,8 +134,11 @@ final class ViewController: UIViewController {
     private func bindOutput() {
         Observable
             .merge(
-                viewModel.event.flagTapped
-                    .withLatestFrom(viewModel.state.items),
+                Observable.merge(
+                    Defaults.observe(\.flagItems).map { _ in },
+                    viewModel.event.flagTapped.map { _ in }
+                )
+                .withLatestFrom(viewModel.state.items),
                 viewModel.state.items.asObservable()
             )
             .map { [Section(model: (), items: $0)] }
