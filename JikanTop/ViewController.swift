@@ -33,7 +33,7 @@ final class ViewController: UIViewController {
     private lazy var flagBarButton = UIBarButtonItem(image: UIImage(systemName: "flag.fill"), style: .plain, target: nil, action: nil)
 
     private lazy var typeBarButton = UIBarButtonItem(title: "Type", style: .plain, target: nil, action: nil)
-    private lazy var subtypeBarButton = UIBarButtonItem(title: "Subtype", style: .plain, target: nil, action: nil)
+    private lazy var subtypeBarButton = UIBarButtonItem(title: "All Subtype", style: .plain, target: nil, action: nil)
     private lazy var pickerView = UIPickerView()
 
     private lazy var tableView = UITableView().then {
@@ -78,6 +78,46 @@ final class ViewController: UIViewController {
                 self.present(nav, animated: true)
             }
             .disposed(by: rx.disposeBag)
+
+        typeBarButton.rx.tap
+            .bind(with: self) { `self`, _ in
+                let sheet = UIAlertController(title: "Type", message: nil, preferredStyle: .actionSheet)
+                ItemType.allCases.forEach { type in
+                    let action = UIAlertAction(title: type.rawValue.capitalized, style: .default) { _ in
+                        self.viewModel.state.selectedType.accept(type)
+                    }
+                    sheet.addAction(action)
+                }
+                self.present(sheet, animated: true)
+            }
+            .disposed(by: rx.disposeBag)
+
+        subtypeBarButton.rx.tap
+            .bind(with: self) { `self`, _ in
+                let sheet = UIAlertController(title: "Subtype", message: nil, preferredStyle: .actionSheet)
+                sheet.addAction(UIAlertAction(title: "All Subtype", style: .default, handler: { _ in
+                    self.viewModel.state.selectedSubType.accept(nil)
+                }))
+                switch self.viewModel.state.selectedType.value {
+                case .anime:
+                    ItemSubtype.animSubtypes.forEach { subtype in
+                        let action = UIAlertAction(title: subtype.rawValue.capitalized, style: .default) { _ in
+                            self.viewModel.state.selectedSubType.accept(subtype)
+                        }
+                        sheet.addAction(action)
+                    }
+                case .manga:
+                    ItemSubtype.mangaSubtypes.forEach { subtype in
+                        let action = UIAlertAction(title: subtype.rawValue.capitalized, style: .default) { _ in
+                            self.viewModel.state.selectedSubType.accept(subtype)
+                        }
+                        sheet.addAction(action)
+                    }
+                default: break
+                }
+                self.present(sheet, animated: true)
+            }
+            .disposed(by: rx.disposeBag)
     }
 
     private func bindOutput() {
@@ -99,6 +139,21 @@ final class ViewController: UIViewController {
                     Defaults.flagItems.append(item)
                 }
             }
+            .disposed(by: rx.disposeBag)
+
+        viewModel.state.selectedType
+            .map(\.rawValue.capitalized)
+            .bind(to: typeBarButton.rx.title)
+            .disposed(by: rx.disposeBag)
+
+        viewModel.state.selectedType
+            .map { [.anime, .manga].contains($0) }
+            .bind(to: subtypeBarButton.rx.isEnabled)
+            .disposed(by: rx.disposeBag)
+
+        viewModel.state.selectedSubType
+            .map { $0?.rawValue.capitalized ?? "All Subtype" }
+            .bind(to: subtypeBarButton.rx.title)
             .disposed(by: rx.disposeBag)
     }
 }

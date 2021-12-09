@@ -34,7 +34,7 @@ enum JikanTarget: SugarTargetType {
 
 // MARK: - ItemType
 
-enum ItemType: String, Decodable {
+enum ItemType: String, CaseIterable {
     case anime
     case manga
     case people
@@ -43,32 +43,34 @@ enum ItemType: String, Decodable {
 
 // MARK: - ItemSubtype
 
-protocol ItemSubtype {
-    var rawValue: String { get }
-}
-
-// MARK: - AnimSubtype
-
-enum AnimSubtype: String, ItemSubtype {
+enum ItemSubtype: String {
+    // Anim only
     case airing
     case upcoming
     case tv
     case movie
     case ova
     case special
-    case bypopularity
-    case favorite
-}
 
-// MARK: - MangaSubtype
-
-enum MangaSubtype: String, ItemSubtype {
+    // Manga only
     case manga
     case novels
     case oneshots
     case doujin
     case manhwa
     case manhua
+
+    // both
     case bypopularity
     case favorite
+
+    // MARK: Internal
+
+    static var animSubtypes: [ItemSubtype] {
+        [airing, upcoming, tv, movie, ova, special, bypopularity, favorite]
+    }
+
+    static var mangaSubtypes: [ItemSubtype] {
+        [manga, novels, oneshots, doujin, manhwa, manhua, bypopularity, favorite]
+    }
 }

@@ -5,10 +5,10 @@
 //  Created by Eric Hsu on 2021/12/10.
 //
 
-import RxCocoa
-import RxSwift
 import MoyaSugar
 import ProgressHUD
+import RxCocoa
+import RxSwift
 
 // MARK: - ViewModel
 
@@ -36,19 +36,25 @@ final class ViewModel {
     let event = Event()
 
     func fetchItems(at page: Int) {
-        provider.rx.request(.topItems(type: .anime, subtype: nil, page: nil))
-            .map([TopItem].self, atKeyPath: "top")
-            .subscribe(
-                with: self,
-                onSuccess: { `self`, items in
-                    self.state.items.accept(items)
-                },
-                onFailure: { _, error in
-                    print(error)
-                    ProgressHUD.showFailed(error.localizedDescription)
-                }
+        provider.rx.request(
+            .topItems(
+                type: state.selectedType.value,
+                subtype: state.selectedSubType.value,
+                page: state.lastPage.value
             )
-            .disposed(by: bag)
+        )
+        .map([TopItem].self, atKeyPath: "top")
+        .subscribe(
+            with: self,
+            onSuccess: { `self`, items in
+                self.state.items.accept(items)
+            },
+            onFailure: { _, error in
+                print(error)
+                ProgressHUD.showFailed(error.localizedDescription)
+            }
+        )
+        .disposed(by: bag)
     }
 
     // MARK: Private
@@ -61,6 +67,8 @@ extension ViewModel {
     struct State {
         let items = BehaviorRelay<[TopItem]>(value: [])
         let lastPage = BehaviorRelay<Int>(value: 0)
+        let selectedType = BehaviorRelay<ItemType>(value: .anime)
+        let selectedSubType = BehaviorRelay<ItemSubtype?>(value: nil)
     }
 
     struct Event {
