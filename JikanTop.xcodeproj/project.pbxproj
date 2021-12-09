@@ -16,6 +16,18 @@
 		0723CA4C27626D7B00C0059E /* JikanTopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA4B27626D7B00C0059E /* JikanTopTests.swift */; };
 		0723CA5627626D7B00C0059E /* JikanTopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA5527626D7B00C0059E /* JikanTopUITests.swift */; };
 		0723CA5827626D7B00C0059E /* JikanTopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA5727626D7B00C0059E /* JikanTopUITestsLaunchTests.swift */; };
+		0723CA6627626E9100C0059E /* MoyaSugar in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA6527626E9100C0059E /* MoyaSugar */; };
+		0723CA6A27626EB300C0059E /* JikanTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA6927626EB300C0059E /* JikanTarget.swift */; };
+		0723CA6D27626F4400C0059E /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA6C27626F4400C0059E /* SwifterSwift */; };
+		0723CA70276275B800C0059E /* JikanTargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA6F276275B800C0059E /* JikanTargetTests.swift */; };
+		0723CA73276275F400C0059E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA72276275F400C0059E /* RxCocoa */; };
+		0723CA75276275F400C0059E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA74276275F400C0059E /* RxRelay */; };
+		0723CA77276275F400C0059E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA76276275F400C0059E /* RxSwift */; };
+		0723CA79276276C400C0059E /* Sample1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0723CA78276276C400C0059E /* Sample1.json */; };
+		0723CA7B2762772800C0059E /* TopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA7A2762772800C0059E /* TopItem.swift */; };
+		0723CA7E2762774C00C0059E /* BackedCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA7D2762774C00C0059E /* BackedCodable */; };
+		0723CA81276278DF00C0059E /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA80276278DF00C0059E /* Then */; };
+		0723CA8427627B4100C0059E /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA8327627B4100C0059E /* RxMoya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +61,10 @@
 		0723CA5127626D7B00C0059E /* JikanTopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JikanTopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0723CA5527626D7B00C0059E /* JikanTopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanTopUITests.swift; sourceTree = "<group>"; };
 		0723CA5727626D7B00C0059E /* JikanTopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanTopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0723CA6927626EB300C0059E /* JikanTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanTarget.swift; sourceTree = "<group>"; };
+		0723CA6F276275B800C0059E /* JikanTargetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanTargetTests.swift; sourceTree = "<group>"; };
+		0723CA78276276C400C0059E /* Sample1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sample1.json; sourceTree = "<group>"; };
+		0723CA7A2762772800C0059E /* TopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0723CA73276275F400C0059E /* RxCocoa in Frameworks */,
+				0723CA7E2762774C00C0059E /* BackedCodable in Frameworks */,
+				0723CA6627626E9100C0059E /* MoyaSugar in Frameworks */,
+				0723CA81276278DF00C0059E /* Then in Frameworks */,
+				0723CA77276275F400C0059E /* RxSwift in Frameworks */,
+				0723CA75276275F400C0059E /* RxRelay in Frameworks */,
+				0723CA8427627B4100C0059E /* RxMoya in Frameworks */,
+				0723CA6D27626F4400C0059E /* SwifterSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +123,8 @@
 		0723CA3327626D7800C0059E /* JikanTop */ = {
 			isa = PBXGroup;
 			children = (
+				0723CA6827626EA200C0059E /* Services */,
+				0723CA6727626E9B00C0059E /* Models */,
 				0723CA3427626D7800C0059E /* AppDelegate.swift */,
 				0723CA3627626D7800C0059E /* SceneDelegate.swift */,
 				0723CA3827626D7800C0059E /* ViewController.swift */,
@@ -114,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				0723CA4B27626D7B00C0059E /* JikanTopTests.swift */,
+				0723CA6E2762757D00C0059E /* Services */,
 			);
 			path = JikanTopTests;
 			sourceTree = "<group>";
@@ -125,6 +152,31 @@
 				0723CA5727626D7B00C0059E /* JikanTopUITestsLaunchTests.swift */,
 			);
 			path = JikanTopUITests;
+			sourceTree = "<group>";
+		};
+		0723CA6727626E9B00C0059E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0723CA7A2762772800C0059E /* TopItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0723CA6827626EA200C0059E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0723CA6927626EB300C0059E /* JikanTarget.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0723CA6E2762757D00C0059E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0723CA6F276275B800C0059E /* JikanTargetTests.swift */,
+				0723CA78276276C400C0059E /* Sample1.json */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +195,16 @@
 			dependencies = (
 			);
 			name = JikanTop;
+			packageProductDependencies = (
+				0723CA6527626E9100C0059E /* MoyaSugar */,
+				0723CA6C27626F4400C0059E /* SwifterSwift */,
+				0723CA72276275F400C0059E /* RxCocoa */,
+				0723CA74276275F400C0059E /* RxRelay */,
+				0723CA76276275F400C0059E /* RxSwift */,
+				0723CA7D2762774C00C0059E /* BackedCodable */,
+				0723CA80276278DF00C0059E /* Then */,
+				0723CA8327627B4100C0059E /* RxMoya */,
+			);
 			productName = JikanTop;
 			productReference = 0723CA3127626D7800C0059E /* JikanTop.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +277,14 @@
 				Base,
 			);
 			mainGroup = 0723CA2827626D7800C0059E;
+			packageReferences = (
+				0723CA6427626E9100C0059E /* XCRemoteSwiftPackageReference "MoyaSugar" */,
+				0723CA6B27626F4300C0059E /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */,
+				0723CA7C2762774B00C0059E /* XCRemoteSwiftPackageReference "BackedCodable" */,
+				0723CA7F276278DF00C0059E /* XCRemoteSwiftPackageReference "Then" */,
+				0723CA8227627B4100C0059E /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 0723CA3227626D7800C0059E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0723CA79276276C400C0059E /* Sample1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0723CA6A27626EB300C0059E /* JikanTarget.swift in Sources */,
 				0723CA3927626D7800C0059E /* ViewController.swift in Sources */,
 				0723CA3527626D7800C0059E /* AppDelegate.swift in Sources */,
 				0723CA3727626D7800C0059E /* SceneDelegate.swift in Sources */,
+				0723CA7B2762772800C0059E /* TopItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0723CA70276275B800C0059E /* JikanTargetTests.swift in Sources */,
 				0723CA4C27626D7B00C0059E /* JikanTopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,7 +530,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -484,7 +558,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -624,6 +698,100 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0723CA6427626E9100C0059E /* XCRemoteSwiftPackageReference "MoyaSugar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/erichsu/MoyaSugar";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		0723CA6B27626F4300C0059E /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+		0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		0723CA7C2762774B00C0059E /* XCRemoteSwiftPackageReference "BackedCodable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jegnux/BackedCodable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+		0723CA7F276278DF00C0059E /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		0723CA8227627B4100C0059E /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0723CA6527626E9100C0059E /* MoyaSugar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA6427626E9100C0059E /* XCRemoteSwiftPackageReference "MoyaSugar" */;
+			productName = MoyaSugar;
+		};
+		0723CA6C27626F4400C0059E /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA6B27626F4300C0059E /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+		0723CA72276275F400C0059E /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0723CA74276275F400C0059E /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		0723CA76276275F400C0059E /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		0723CA7D2762774C00C0059E /* BackedCodable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA7C2762774B00C0059E /* XCRemoteSwiftPackageReference "BackedCodable" */;
+			productName = BackedCodable;
+		};
+		0723CA80276278DF00C0059E /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA7F276278DF00C0059E /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		0723CA8327627B4100C0059E /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA8227627B4100C0059E /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0723CA2927626D7800C0059E /* Project object */;
 }
