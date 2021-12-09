@@ -36,9 +36,9 @@ class JikanTopTests: XCTestCase {
 
     func testScrollToNextPage() throws {
         let viewModel = ViewModel()
-        XCTAssertEqual(viewModel.state.lastPage.value, 0)
-        viewModel.event.didScrollBottom.accept(())
         XCTAssertEqual(viewModel.state.lastPage.value, 1)
+        viewModel.event.didScrollBottom.accept(())
+        XCTAssertEqual(viewModel.state.lastPage.value, 2)
     }
 
     func testCallAPIForNextPage() throws {
