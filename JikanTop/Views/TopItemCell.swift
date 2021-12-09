@@ -37,7 +37,7 @@ final class TopItemCell: UITableViewCell {
         bag = DisposeBag()
     }
 
-    func setup(with item: TopItem) {
+    func setup(with item: TopItem, isFlag: Bool) {
         thumbnail.kf.setImage(with: item.imageUrl)
         titleLabel.text = item.title
         rankLabel.text = "No. \(item.rank)"
@@ -45,6 +45,9 @@ final class TopItemCell: UITableViewCell {
             .compactMap { $0?.dateString(ofStyle: .medium) }
             .joined(separator: " - ")
         typeLabel.text = item.type
+        flagButton.imageForNormal = isFlag
+            ? UIImage(systemName: "flag.fill")
+            : UIImage(systemName: "flag")
     }
 
     // MARK: Private
@@ -116,7 +119,7 @@ struct TopItemCellPreview: UIViewRepresentable {
     }
 
     func updateUIView(_ cell: TopItemCell, context: Context) {
-        cell.setup(with: dummyItem)
+        cell.setup(with: dummyItem, isFlag: true)
     }
 }
 

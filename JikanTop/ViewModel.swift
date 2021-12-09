@@ -65,5 +65,6 @@ extension ViewModel {
 
     struct Event {
         let didScrollBottom = PublishRelay<Void>()
+        let flagTapped = PublishRelay<TopItem>()
     }
 }

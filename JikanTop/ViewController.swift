@@ -9,6 +9,7 @@ import RxDataSources
 import RxSwift
 import SafariServices
 import SnapKit
+import SwiftyUserDefaults
 import UIKit
 
 // MARK: - ViewController
@@ -36,7 +37,12 @@ final class ViewController: UIViewController {
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<Section>(
         configureCell: { _, tableView, index, item in
             let cell = tableView.dequeueReusableCell(withClass: TopItemCell.self, for: index)
-            cell.setup(with: item)
+            cell.setup(with: item, isFlag: Defaults.flagItems.contains(item.id))
+            cell.flagButton.rx.tap
+                .bind(with: self) { `self`, _ in
+                    self.viewModel.event.flagTapped.accept(item)
+                }
+                .disposed(by: cell.bag)
             return cell
         }
     )
@@ -59,9 +65,24 @@ final class ViewController: UIViewController {
     }
 
     private func bindOutput() {
-        viewModel.state.items
+        Observable
+            .merge(
+                viewModel.event.flagTapped
+                    .withLatestFrom(viewModel.state.items),
+                viewModel.state.items.asObservable()
+            )
             .map { [Section(model: (), items: $0)] }
             .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
+
+        viewModel.event.flagTapped
+            .bind {
+                if Defaults.flagItems.contains($0.id) {
+                    Defaults.flagItems.removeAll($0.id)
+                } else {
+                    Defaults.flagItems.append($0.id)
+                }
+            }
             .disposed(by: rx.disposeBag)
     }
 }

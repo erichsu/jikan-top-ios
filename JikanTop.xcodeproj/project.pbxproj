@@ -40,6 +40,8 @@
 		0723CAAC2762931F00C0059E /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAAB2762931F00C0059E /* ProgressHUD */; };
 		0723CAAF276295DB00C0059E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAAE276295DB00C0059E /* Kingfisher */; };
 		0723CAB227629B8200C0059E /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAB127629B8200C0059E /* RxGesture */; };
+		0723CAB527629D2100C0059E /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAB427629D2100C0059E /* SwiftyUserDefaults */; };
+		0723CAB727629D3300C0059E /* Defaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CAB627629D3300C0059E /* Defaults+Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,7 @@
 		0723CA7A2762772800C0059E /* TopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItem.swift; sourceTree = "<group>"; };
 		0723CA912762823A00C0059E /* TopItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItemCell.swift; sourceTree = "<group>"; };
 		0723CA932762825500C0059E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		0723CAB627629D3300C0059E /* Defaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Keys.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,7 @@
 				0723CA7E2762774C00C0059E /* BackedCodable in Frameworks */,
 				0723CAAC2762931F00C0059E /* ProgressHUD in Frameworks */,
 				0723CAB227629B8200C0059E /* RxGesture in Frameworks */,
+				0723CAB527629D2100C0059E /* SwiftyUserDefaults in Frameworks */,
 				0723CA6627626E9100C0059E /* MoyaSugar in Frameworks */,
 				0723CAA92762919D00C0059E /* Atlantis in Frameworks */,
 				0723CAA02762873700C0059E /* RxCocoa in Frameworks */,
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				0723CA6927626EB300C0059E /* JikanTarget.swift */,
+				0723CAB627629D3300C0059E /* Defaults+Keys.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -254,6 +259,7 @@
 				0723CAAB2762931F00C0059E /* ProgressHUD */,
 				0723CAAE276295DB00C0059E /* Kingfisher */,
 				0723CAB127629B8200C0059E /* RxGesture */,
+				0723CAB427629D2100C0059E /* SwiftyUserDefaults */,
 			);
 			productName = JikanTop;
 			productReference = 0723CA3127626D7800C0059E /* JikanTop.app */;
@@ -345,6 +351,7 @@
 				0723CAAA2762931F00C0059E /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				0723CAAD276295DB00C0059E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				0723CAB027629B8200C0059E /* XCRemoteSwiftPackageReference "RxGesture" */,
+				0723CAB327629D2100C0059E /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
 			);
 			productRefGroup = 0723CA3227626D7800C0059E /* Products */;
 			projectDirPath = "";
@@ -395,6 +402,7 @@
 				0723CA922762823A00C0059E /* TopItemCell.swift in Sources */,
 				0723CA3527626D7800C0059E /* AppDelegate.swift in Sources */,
 				0723CA3727626D7800C0059E /* SceneDelegate.swift in Sources */,
+				0723CAB727629D3300C0059E /* Defaults+Keys.swift in Sources */,
 				0723CA7B2762772800C0059E /* TopItem.swift in Sources */,
 				0723CA942762825500C0059E /* ViewModel.swift in Sources */,
 			);
@@ -869,6 +877,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		0723CAB327629D2100C0059E /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -961,6 +977,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0723CAB027629B8200C0059E /* XCRemoteSwiftPackageReference "RxGesture" */;
 			productName = RxGesture;
+		};
+		0723CAB427629D2100C0059E /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CAB327629D2100C0059E /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
