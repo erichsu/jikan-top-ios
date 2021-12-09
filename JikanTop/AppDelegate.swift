@@ -5,6 +5,7 @@
 //  Created by Eric Hsu on 2021/12/10.
 //
 
+import NSObject_Rx
 import RxMoya
 import SwifterSwift
 import UIKit
