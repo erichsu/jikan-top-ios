@@ -30,6 +30,12 @@ final class ViewController: UIViewController {
 
     // MARK: Private
 
+    private lazy var flagBarButton = UIBarButtonItem(image: UIImage(systemName: "flag.fill"), style: .plain, target: nil, action: nil)
+
+    private lazy var typeBarButton = UIBarButtonItem(title: "Type", style: .plain, target: nil, action: nil)
+    private lazy var subtypeBarButton = UIBarButtonItem(title: "Subtype", style: .plain, target: nil, action: nil)
+    private lazy var pickerView = UIPickerView()
+
     private lazy var tableView = UITableView().then {
         $0.register(cellWithClass: TopItemCell.self)
     }
@@ -37,7 +43,7 @@ final class ViewController: UIViewController {
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<Section>(
         configureCell: { _, tableView, index, item in
             let cell = tableView.dequeueReusableCell(withClass: TopItemCell.self, for: index)
-            cell.setup(with: item, isFlag: Defaults.flagItems.contains(item.id))
+            cell.setup(with: item, isFlag: Defaults.flagItems.contains(where: { $0.id == item.id }))
             cell.flagButton.rx.tap
                 .bind(with: self) { `self`, _ in
                     self.viewModel.event.flagTapped.accept(item)
@@ -48,6 +54,8 @@ final class ViewController: UIViewController {
     )
 
     private func setupViews() {
+        navigationItem.rightBarButtonItems = [flagBarButton, subtypeBarButton, typeBarButton]
+
         view.addSubview(tableView)
         tableView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -60,6 +68,14 @@ final class ViewController: UIViewController {
             .bind(with: self) { `self`, url in
                 let webView = SFSafariViewController(url: url)
                 self.present(webView, animated: true)
+            }
+            .disposed(by: rx.disposeBag)
+
+        flagBarButton.rx.tap
+            .bind(with: self) { `self`, _ in
+                let vc = FlagItemsViewController()
+                let nav = UINavigationController(rootViewController: vc)
+                self.present(nav, animated: true)
             }
             .disposed(by: rx.disposeBag)
     }
@@ -76,11 +92,11 @@ final class ViewController: UIViewController {
             .disposed(by: rx.disposeBag)
 
         viewModel.event.flagTapped
-            .bind {
-                if Defaults.flagItems.contains($0.id) {
-                    Defaults.flagItems.removeAll($0.id)
+            .bind { item in
+                if Defaults.flagItems.contains(where: { $0.id == item.id }) {
+                    Defaults.flagItems.removeAll(where: { $0.id == item.id })
                 } else {
-                    Defaults.flagItems.append($0.id)
+                    Defaults.flagItems.append(item)
                 }
             }
             .disposed(by: rx.disposeBag)

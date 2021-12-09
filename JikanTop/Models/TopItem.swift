@@ -7,6 +7,7 @@
 
 import BackedCodable
 import Foundation
+import Codextended
 
 // MARK: - TopItem
 
@@ -67,6 +68,22 @@ struct TopItem: BackedDecodable {
 
     @Backed()
     var score: Double
+}
+
+extension TopItem: Encodable {
+    func encode(to encoder: Encoder) throws {
+        try encoder.encode(id, for: "id")
+        try encoder.encode(rank, for: "rank")
+        try encoder.encode(title, for: "title")
+        try encoder.encode(url, for: "url")
+        try encoder.encode(imageUrl, for: "image_url")
+        try encoder.encode(type, for: "type")
+        try encoder.encode(episodes, for: "episodes")
+        try encoder.encode(startDate, for: "start_date")
+        try encoder.encode(endDate, for: "end_date")
+        try encoder.encode(members, for: "members")
+        try encoder.encode(score, for: "score")
+    }
 }
 
 import Then

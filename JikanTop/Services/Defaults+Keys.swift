@@ -10,8 +10,12 @@ import RxSwift
 import SwiftyUserDefaults
 
 extension DefaultsKeys {
-    var flagItems: DefaultsKey<[Int]> { .init("flagItems", defaultValue: []) }
+    var flagItems: DefaultsKey<[TopItem]> { .init("flagItems", defaultValue: []) }
 }
+
+// MARK: - TopItem + DefaultsSerializable
+
+extension TopItem: DefaultsSerializable {}
 
 extension DefaultsAdapter {
     func observe<T: DefaultsSerializable>(_ key: DefaultsKey<T>,

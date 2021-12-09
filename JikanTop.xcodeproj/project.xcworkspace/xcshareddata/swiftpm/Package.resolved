@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "Codextended",
+        "repositoryURL": "https://github.com/JohnSundell/Codextended",
+        "state": {
+          "branch": null,
+          "revision": "8d7c46dfc9c55240870cf5561d6cefa41e3d7105",
+          "version": "0.3.0"
+        }
+      },
+      {
         "package": "Immutable",
         "repositoryURL": "https://github.com/devxoul/Immutable.git",
         "state": {
@@ -44,15 +53,6 @@
           "branch": null,
           "revision": "0c02c46cfdc0656ce74fd0963a75e5000a0b7f23",
           "version": "7.1.2"
-        }
-      },
-      {
-        "package": "Moya",
-        "repositoryURL": "https://github.com/Moya/Moya",
-        "state": {
-          "branch": null,
-          "revision": "9b906860e3c3c09032879465c471e6375829593f",
-          "version": "15.0.0"
         }
       },
       {

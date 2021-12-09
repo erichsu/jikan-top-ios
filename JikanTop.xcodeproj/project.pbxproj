@@ -42,6 +42,8 @@
 		0723CAB227629B8200C0059E /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAB127629B8200C0059E /* RxGesture */; };
 		0723CAB527629D2100C0059E /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAB427629D2100C0059E /* SwiftyUserDefaults */; };
 		0723CAB727629D3300C0059E /* Defaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CAB627629D3300C0059E /* Defaults+Keys.swift */; };
+		0723CAB92762A56400C0059E /* FlagItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CAB82762A56400C0059E /* FlagItemsViewController.swift */; };
+		0723CABC2762A82200C0059E /* Codextended in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CABB2762A82200C0059E /* Codextended */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,7 @@
 		0723CA912762823A00C0059E /* TopItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItemCell.swift; sourceTree = "<group>"; };
 		0723CA932762825500C0059E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		0723CAB627629D3300C0059E /* Defaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Keys.swift"; sourceTree = "<group>"; };
+		0723CAB82762A56400C0059E /* FlagItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagItemsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 				0723CA81276278DF00C0059E /* Then in Frameworks */,
 				0723CA8C27627E7A00C0059E /* RxDataSources in Frameworks */,
 				0723CA8A27627E7A00C0059E /* Differentiator in Frameworks */,
+				0723CABC2762A82200C0059E /* Codextended in Frameworks */,
 				0723CAA42762873700C0059E /* RxSwift in Frameworks */,
 				0723CAAF276295DB00C0059E /* Kingfisher in Frameworks */,
 				0723CA8727627E1700C0059E /* SnapKit in Frameworks */,
@@ -158,6 +162,7 @@
 				0723CA3427626D7800C0059E /* AppDelegate.swift */,
 				0723CA3627626D7800C0059E /* SceneDelegate.swift */,
 				0723CA3827626D7800C0059E /* ViewController.swift */,
+				0723CAB82762A56400C0059E /* FlagItemsViewController.swift */,
 				0723CA932762825500C0059E /* ViewModel.swift */,
 				0723CA3A27626D7800C0059E /* Main.storyboard */,
 				0723CA3D27626D7B00C0059E /* Assets.xcassets */,
@@ -260,6 +265,7 @@
 				0723CAAE276295DB00C0059E /* Kingfisher */,
 				0723CAB127629B8200C0059E /* RxGesture */,
 				0723CAB427629D2100C0059E /* SwiftyUserDefaults */,
+				0723CABB2762A82200C0059E /* Codextended */,
 			);
 			productName = JikanTop;
 			productReference = 0723CA3127626D7800C0059E /* JikanTop.app */;
@@ -352,6 +358,7 @@
 				0723CAAD276295DB00C0059E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				0723CAB027629B8200C0059E /* XCRemoteSwiftPackageReference "RxGesture" */,
 				0723CAB327629D2100C0059E /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+				0723CABA2762A82200C0059E /* XCRemoteSwiftPackageReference "Codextended" */,
 			);
 			productRefGroup = 0723CA3227626D7800C0059E /* Products */;
 			projectDirPath = "";
@@ -398,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0723CA6A27626EB300C0059E /* JikanTarget.swift in Sources */,
+				0723CAB92762A56400C0059E /* FlagItemsViewController.swift in Sources */,
 				0723CA3927626D7800C0059E /* ViewController.swift in Sources */,
 				0723CA922762823A00C0059E /* TopItemCell.swift in Sources */,
 				0723CA3527626D7800C0059E /* AppDelegate.swift in Sources */,
@@ -885,6 +893,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		0723CABA2762A82200C0059E /* XCRemoteSwiftPackageReference "Codextended" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Codextended";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -982,6 +998,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0723CAB327629D2100C0059E /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
 			productName = SwiftyUserDefaults;
+		};
+		0723CABB2762A82200C0059E /* Codextended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CABA2762A82200C0059E /* XCRemoteSwiftPackageReference "Codextended" */;
+			productName = Codextended;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
