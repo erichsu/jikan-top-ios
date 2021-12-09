@@ -38,6 +38,8 @@
 		0723CAA62762873700C0059E /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA52762873700C0059E /* RxTest */; };
 		0723CAA92762919D00C0059E /* Atlantis in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA82762919D00C0059E /* Atlantis */; };
 		0723CAAC2762931F00C0059E /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAAB2762931F00C0059E /* ProgressHUD */; };
+		0723CAAF276295DB00C0059E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAAE276295DB00C0059E /* Kingfisher */; };
+		0723CAB227629B8200C0059E /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAB127629B8200C0059E /* RxGesture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,7 @@
 			files = (
 				0723CA7E2762774C00C0059E /* BackedCodable in Frameworks */,
 				0723CAAC2762931F00C0059E /* ProgressHUD in Frameworks */,
+				0723CAB227629B8200C0059E /* RxGesture in Frameworks */,
 				0723CA6627626E9100C0059E /* MoyaSugar in Frameworks */,
 				0723CAA92762919D00C0059E /* Atlantis in Frameworks */,
 				0723CAA02762873700C0059E /* RxCocoa in Frameworks */,
@@ -93,6 +96,7 @@
 				0723CA8C27627E7A00C0059E /* RxDataSources in Frameworks */,
 				0723CA8A27627E7A00C0059E /* Differentiator in Frameworks */,
 				0723CAA42762873700C0059E /* RxSwift in Frameworks */,
+				0723CAAF276295DB00C0059E /* Kingfisher in Frameworks */,
 				0723CA8727627E1700C0059E /* SnapKit in Frameworks */,
 				0723CA8427627B4100C0059E /* RxMoya in Frameworks */,
 				0723CA8F27627F2B00C0059E /* NSObject-Rx in Frameworks */,
@@ -248,6 +252,8 @@
 				0723CAA32762873700C0059E /* RxSwift */,
 				0723CAA82762919D00C0059E /* Atlantis */,
 				0723CAAB2762931F00C0059E /* ProgressHUD */,
+				0723CAAE276295DB00C0059E /* Kingfisher */,
+				0723CAB127629B8200C0059E /* RxGesture */,
 			);
 			productName = JikanTop;
 			productReference = 0723CA3127626D7800C0059E /* JikanTop.app */;
@@ -337,6 +343,8 @@
 				0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */,
 				0723CAA72762919D00C0059E /* XCRemoteSwiftPackageReference "atlantis" */,
 				0723CAAA2762931F00C0059E /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				0723CAAD276295DB00C0059E /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				0723CAB027629B8200C0059E /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = 0723CA3227626D7800C0059E /* Products */;
 			projectDirPath = "";
@@ -845,6 +853,22 @@
 				minimumVersion = 13.6.0;
 			};
 		};
+		0723CAAD276295DB00C0059E /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		0723CAB027629B8200C0059E /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -927,6 +951,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0723CAAA2762931F00C0059E /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
+		};
+		0723CAAE276295DB00C0059E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CAAD276295DB00C0059E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		0723CAB127629B8200C0059E /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CAB027629B8200C0059E /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

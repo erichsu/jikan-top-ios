@@ -36,7 +36,7 @@ final class ViewController: UIViewController {
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<Section>(
         configureCell: { _, tableView, index, item in
             let cell = tableView.dequeueReusableCell(withClass: TopItemCell.self, for: index)
-            cell.textLabel?.text = item.title
+            cell.setup(with: item)
             return cell
         }
     )
