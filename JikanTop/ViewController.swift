@@ -7,13 +7,13 @@
 
 import RxDataSources
 import RxSwift
+import SafariServices
 import SnapKit
 import UIKit
-import SafariServices
 
 // MARK: - ViewController
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     // MARK: Internal
 
     typealias Section = SectionModel<Void, String>
@@ -52,7 +52,3 @@ class ViewController: UIViewController {
         }
     )
 }
-
-// MARK: - TopItemCell
-
-final class TopItemCell: UITableViewCell {}

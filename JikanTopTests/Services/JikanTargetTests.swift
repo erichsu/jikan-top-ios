@@ -20,7 +20,7 @@ class JikanTargetTests: XCTestCase {
                  httpHeaderFields: target.headers)
     }
 
-    lazy var stubbingProvider = MoyaProvider<JikanTarget>(
+    lazy var stubbingProvider = MoyaSugarProvider<JikanTarget>(
         endpointClosure: sampleEndpointClosure,
         stubClosure: MoyaProvider.immediatelyStub
     )

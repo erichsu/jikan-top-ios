@@ -20,9 +20,6 @@
 		0723CA6A27626EB300C0059E /* JikanTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA6927626EB300C0059E /* JikanTarget.swift */; };
 		0723CA6D27626F4400C0059E /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA6C27626F4400C0059E /* SwifterSwift */; };
 		0723CA70276275B800C0059E /* JikanTargetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA6F276275B800C0059E /* JikanTargetTests.swift */; };
-		0723CA73276275F400C0059E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA72276275F400C0059E /* RxCocoa */; };
-		0723CA75276275F400C0059E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA74276275F400C0059E /* RxRelay */; };
-		0723CA77276275F400C0059E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA76276275F400C0059E /* RxSwift */; };
 		0723CA79276276C400C0059E /* Sample1.json in Resources */ = {isa = PBXBuildFile; fileRef = 0723CA78276276C400C0059E /* Sample1.json */; };
 		0723CA7B2762772800C0059E /* TopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA7A2762772800C0059E /* TopItem.swift */; };
 		0723CA7E2762774C00C0059E /* BackedCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA7D2762774C00C0059E /* BackedCodable */; };
@@ -32,6 +29,13 @@
 		0723CA8A27627E7A00C0059E /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA8927627E7A00C0059E /* Differentiator */; };
 		0723CA8C27627E7A00C0059E /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA8B27627E7A00C0059E /* RxDataSources */; };
 		0723CA8F27627F2B00C0059E /* NSObject-Rx in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA8E27627F2B00C0059E /* NSObject-Rx */; };
+		0723CA922762823A00C0059E /* TopItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA912762823A00C0059E /* TopItemCell.swift */; };
+		0723CA942762825500C0059E /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723CA932762825500C0059E /* ViewModel.swift */; };
+		0723CA9E2762873700C0059E /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA9D2762873700C0059E /* RxBlocking */; };
+		0723CAA02762873700C0059E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CA9F2762873700C0059E /* RxCocoa */; };
+		0723CAA22762873700C0059E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA12762873700C0059E /* RxRelay */; };
+		0723CAA42762873700C0059E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA32762873700C0059E /* RxSwift */; };
+		0723CAA62762873700C0059E /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA52762873700C0059E /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,8 @@
 		0723CA6F276275B800C0059E /* JikanTargetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JikanTargetTests.swift; sourceTree = "<group>"; };
 		0723CA78276276C400C0059E /* Sample1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sample1.json; sourceTree = "<group>"; };
 		0723CA7A2762772800C0059E /* TopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItem.swift; sourceTree = "<group>"; };
+		0723CA912762823A00C0059E /* TopItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopItemCell.swift; sourceTree = "<group>"; };
+		0723CA932762825500C0059E /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,18 +82,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0723CA73276275F400C0059E /* RxCocoa in Frameworks */,
 				0723CA7E2762774C00C0059E /* BackedCodable in Frameworks */,
 				0723CA6627626E9100C0059E /* MoyaSugar in Frameworks */,
+				0723CAA02762873700C0059E /* RxCocoa in Frameworks */,
 				0723CA81276278DF00C0059E /* Then in Frameworks */,
-				0723CA77276275F400C0059E /* RxSwift in Frameworks */,
 				0723CA8C27627E7A00C0059E /* RxDataSources in Frameworks */,
-				0723CA75276275F400C0059E /* RxRelay in Frameworks */,
 				0723CA8A27627E7A00C0059E /* Differentiator in Frameworks */,
+				0723CAA42762873700C0059E /* RxSwift in Frameworks */,
 				0723CA8727627E1700C0059E /* SnapKit in Frameworks */,
 				0723CA8427627B4100C0059E /* RxMoya in Frameworks */,
 				0723CA8F27627F2B00C0059E /* NSObject-Rx in Frameworks */,
 				0723CA6D27626F4400C0059E /* SwifterSwift in Frameworks */,
+				0723CAA22762873700C0059E /* RxRelay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0723CAA62762873700C0059E /* RxTest in Frameworks */,
+				0723CA9E2762873700C0059E /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +123,7 @@
 				0723CA4A27626D7B00C0059E /* JikanTopTests */,
 				0723CA5427626D7B00C0059E /* JikanTopUITests */,
 				0723CA3227626D7800C0059E /* Products */,
+				0723CA952762849100C0059E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,9 +142,11 @@
 			children = (
 				0723CA6827626EA200C0059E /* Services */,
 				0723CA6727626E9B00C0059E /* Models */,
+				0723CA902762822B00C0059E /* Views */,
 				0723CA3427626D7800C0059E /* AppDelegate.swift */,
 				0723CA3627626D7800C0059E /* SceneDelegate.swift */,
 				0723CA3827626D7800C0059E /* ViewController.swift */,
+				0723CA932762825500C0059E /* ViewModel.swift */,
 				0723CA3A27626D7800C0059E /* Main.storyboard */,
 				0723CA3D27626D7B00C0059E /* Assets.xcassets */,
 				0723CA3F27626D7B00C0059E /* LaunchScreen.storyboard */,
@@ -187,6 +198,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		0723CA902762822B00C0059E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0723CA912762823A00C0059E /* TopItemCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0723CA952762849100C0059E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,9 +232,6 @@
 			packageProductDependencies = (
 				0723CA6527626E9100C0059E /* MoyaSugar */,
 				0723CA6C27626F4400C0059E /* SwifterSwift */,
-				0723CA72276275F400C0059E /* RxCocoa */,
-				0723CA74276275F400C0059E /* RxRelay */,
-				0723CA76276275F400C0059E /* RxSwift */,
 				0723CA7D2762774C00C0059E /* BackedCodable */,
 				0723CA80276278DF00C0059E /* Then */,
 				0723CA8327627B4100C0059E /* RxMoya */,
@@ -216,6 +239,9 @@
 				0723CA8927627E7A00C0059E /* Differentiator */,
 				0723CA8B27627E7A00C0059E /* RxDataSources */,
 				0723CA8E27627F2B00C0059E /* NSObject-Rx */,
+				0723CA9F2762873700C0059E /* RxCocoa */,
+				0723CAA12762873700C0059E /* RxRelay */,
+				0723CAA32762873700C0059E /* RxSwift */,
 			);
 			productName = JikanTop;
 			productReference = 0723CA3127626D7800C0059E /* JikanTop.app */;
@@ -235,6 +261,10 @@
 				0723CA4927626D7B00C0059E /* PBXTargetDependency */,
 			);
 			name = JikanTopTests;
+			packageProductDependencies = (
+				0723CA9D2762873700C0059E /* RxBlocking */,
+				0723CAA52762873700C0059E /* RxTest */,
+			);
 			productName = JikanTopTests;
 			productReference = 0723CA4727626D7B00C0059E /* JikanTopTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -292,13 +322,13 @@
 			packageReferences = (
 				0723CA6427626E9100C0059E /* XCRemoteSwiftPackageReference "MoyaSugar" */,
 				0723CA6B27626F4300C0059E /* XCRemoteSwiftPackageReference "SwifterSwift" */,
-				0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */,
 				0723CA7C2762774B00C0059E /* XCRemoteSwiftPackageReference "BackedCodable" */,
 				0723CA7F276278DF00C0059E /* XCRemoteSwiftPackageReference "Then" */,
 				0723CA8227627B4100C0059E /* XCRemoteSwiftPackageReference "Moya" */,
 				0723CA8527627E1700C0059E /* XCRemoteSwiftPackageReference "SnapKit" */,
 				0723CA8827627E7A00C0059E /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				0723CA8D27627F2B00C0059E /* XCRemoteSwiftPackageReference "NSObject-Rx" */,
+				0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 0723CA3227626D7800C0059E /* Products */;
 			projectDirPath = "";
@@ -346,9 +376,11 @@
 			files = (
 				0723CA6A27626EB300C0059E /* JikanTarget.swift in Sources */,
 				0723CA3927626D7800C0059E /* ViewController.swift in Sources */,
+				0723CA922762823A00C0059E /* TopItemCell.swift in Sources */,
 				0723CA3527626D7800C0059E /* AppDelegate.swift in Sources */,
 				0723CA3727626D7800C0059E /* SceneDelegate.swift in Sources */,
 				0723CA7B2762772800C0059E /* TopItem.swift in Sources */,
+				0723CA942762825500C0059E /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,14 +763,6 @@
 				minimumVersion = 5.2.0;
 			};
 		};
-		0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 		0723CA7C2762774B00C0059E /* XCRemoteSwiftPackageReference "BackedCodable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jegnux/BackedCodable";
@@ -787,6 +811,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -799,21 +831,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0723CA6B27626F4300C0059E /* XCRemoteSwiftPackageReference "SwifterSwift" */;
 			productName = SwifterSwift;
-		};
-		0723CA72276275F400C0059E /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		0723CA74276275F400C0059E /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		0723CA76276275F400C0059E /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0723CA71276275F400C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
 		};
 		0723CA7D2762774C00C0059E /* BackedCodable */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -849,6 +866,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0723CA8D27627F2B00C0059E /* XCRemoteSwiftPackageReference "NSObject-Rx" */;
 			productName = "NSObject-Rx";
+		};
+		0723CA9D2762873700C0059E /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		0723CA9F2762873700C0059E /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		0723CAA12762873700C0059E /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		0723CAA32762873700C0059E /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		0723CAA52762873700C0059E /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
