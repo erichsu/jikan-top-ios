@@ -52,7 +52,7 @@ struct TopItem: BackedDecodable {
     var imageUrl: URL?
 
     @Backed()
-    var type: String
+    var type: String?
 
     @Backed()
     var episodes: String?
@@ -64,10 +64,10 @@ struct TopItem: BackedDecodable {
     var endDate: Date?
 
     @Backed()
-    var members: Int
+    var members: Int?
 
     @Backed()
-    var score: Double
+    var score: Double?
 }
 
 extension TopItem: Encodable {

@@ -23,6 +23,21 @@ final class ViewModel {
             .bind(to: state.lastPage)
             .disposed(by: bag)
 
+        Observable
+            .merge(
+                state.selectedType.map { _ in },
+                state.selectedSubType.map { _ in }
+            )
+            .debounce(.microseconds(100), scheduler: MainScheduler.instance)
+            .map { _ in 1 }
+            .bind(to: state.lastPage)
+            .disposed(by: bag)
+
+        state.selectedType
+            .map { _ in nil }
+            .bind(to: state.selectedSubType)
+            .disposed(by: bag)
+
         state.lastPage
             .bind(with: self) { `self`, page in
                 self.fetchItems(at: page)
