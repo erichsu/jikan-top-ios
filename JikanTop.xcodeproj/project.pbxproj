@@ -36,6 +36,8 @@
 		0723CAA22762873700C0059E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA12762873700C0059E /* RxRelay */; };
 		0723CAA42762873700C0059E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA32762873700C0059E /* RxSwift */; };
 		0723CAA62762873700C0059E /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA52762873700C0059E /* RxTest */; };
+		0723CAA92762919D00C0059E /* Atlantis in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAA82762919D00C0059E /* Atlantis */; };
+		0723CAAC2762931F00C0059E /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 0723CAAB2762931F00C0059E /* ProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +85,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0723CA7E2762774C00C0059E /* BackedCodable in Frameworks */,
+				0723CAAC2762931F00C0059E /* ProgressHUD in Frameworks */,
 				0723CA6627626E9100C0059E /* MoyaSugar in Frameworks */,
+				0723CAA92762919D00C0059E /* Atlantis in Frameworks */,
 				0723CAA02762873700C0059E /* RxCocoa in Frameworks */,
 				0723CA81276278DF00C0059E /* Then in Frameworks */,
 				0723CA8C27627E7A00C0059E /* RxDataSources in Frameworks */,
@@ -242,6 +246,8 @@
 				0723CA9F2762873700C0059E /* RxCocoa */,
 				0723CAA12762873700C0059E /* RxRelay */,
 				0723CAA32762873700C0059E /* RxSwift */,
+				0723CAA82762919D00C0059E /* Atlantis */,
+				0723CAAB2762931F00C0059E /* ProgressHUD */,
 			);
 			productName = JikanTop;
 			productReference = 0723CA3127626D7800C0059E /* JikanTop.app */;
@@ -329,6 +335,8 @@
 				0723CA8827627E7A00C0059E /* XCRemoteSwiftPackageReference "RxDataSources" */,
 				0723CA8D27627F2B00C0059E /* XCRemoteSwiftPackageReference "NSObject-Rx" */,
 				0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */,
+				0723CAA72762919D00C0059E /* XCRemoteSwiftPackageReference "atlantis" */,
+				0723CAAA2762931F00C0059E /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = 0723CA3227626D7800C0059E /* Products */;
 			projectDirPath = "";
@@ -563,6 +571,7 @@
 				DEVELOPMENT_TEAM = 66D3CJTRN4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JikanTop/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Atlantis would use Bonjour Service to discover Proxyman app from your local network.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -591,6 +600,7 @@
 				DEVELOPMENT_TEAM = 66D3CJTRN4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JikanTop/Info.plist;
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Atlantis would use Bonjour Service to discover Proxyman app from your local network.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -819,6 +829,22 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		0723CAA72762919D00C0059E /* XCRemoteSwiftPackageReference "atlantis" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ProxymanApp/atlantis";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		0723CAAA2762931F00C0059E /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.6.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -891,6 +917,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0723CA9C2762873700C0059E /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxTest;
+		};
+		0723CAA82762919D00C0059E /* Atlantis */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CAA72762919D00C0059E /* XCRemoteSwiftPackageReference "atlantis" */;
+			productName = Atlantis;
+		};
+		0723CAAB2762931F00C0059E /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0723CAAA2762931F00C0059E /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

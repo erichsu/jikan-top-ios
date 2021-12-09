@@ -66,7 +66,7 @@ struct TopItem: BackedDecodable {
     var members: Int
 
     @Backed()
-    var score: Int
+    var score: Double
 }
 
 import Then

@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Atlantis",
+        "repositoryURL": "https://github.com/ProxymanApp/atlantis",
+        "state": {
+          "branch": null,
+          "revision": "507b49a18b7a19324d98a454dd3c0ababc101950",
+          "version": "1.13.0"
+        }
+      },
+      {
         "package": "BackedCodable",
         "repositoryURL": "https://github.com/jegnux/BackedCodable",
         "state": {
@@ -29,6 +38,15 @@
         }
       },
       {
+        "package": "Moya",
+        "repositoryURL": "https://github.com/Moya/Moya",
+        "state": {
+          "branch": null,
+          "revision": "9b906860e3c3c09032879465c471e6375829593f",
+          "version": "15.0.0"
+        }
+      },
+      {
         "package": "MoyaSugar",
         "repositoryURL": "https://github.com/erichsu/MoyaSugar",
         "state": {
@@ -44,6 +62,15 @@
           "branch": null,
           "revision": "6134a640808db7390d3dfcb32ef5f0a12b7a644d",
           "version": "5.2.2"
+        }
+      },
+      {
+        "package": "ProgressHUD",
+        "repositoryURL": "https://github.com/relatedcode/ProgressHUD",
+        "state": {
+          "branch": null,
+          "revision": "22c3f83268b4c47b4623fe3a9701af7310fa8d8a",
+          "version": "13.6.1"
         }
       },
       {

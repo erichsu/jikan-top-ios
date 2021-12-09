@@ -28,7 +28,7 @@ enum JikanTarget: SugarTargetType {
     }
 
     var parameters: Parameters? { nil }
-    var baseURL: URL { "https://api.jikan.moe/v3/".url! }
+    var baseURL: URL { "https://api.jikan.moe/v3".url! }
     var headers: [String: String]? { nil }
 }
 

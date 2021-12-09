@@ -16,26 +16,15 @@ import UIKit
 final class ViewController: UIViewController {
     // MARK: Internal
 
-    typealias Section = SectionModel<Void, String>
+    typealias Section = SectionModel<Void, TopItem>
+
+    let viewModel = ViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-
-        Observable.just([Section(model: (), items: ["1", "2"])])
-            .bind(to: tableView.rx.items(dataSource: dataSource))
-            .disposed(by: rx.disposeBag)
-
-        tableView.rx.modelSelected(Section.Item.self)
-            .bind(with: self) { `self`, _ in
-                let webView = SFSafariViewController(url: "https://google.com".url!)
-                self.present(webView, animated: true)
-            }
-            .disposed(by: rx.disposeBag)
+        setupViews()
+        bindInput()
+        bindOutput()
     }
 
     // MARK: Private
@@ -45,10 +34,34 @@ final class ViewController: UIViewController {
     }
 
     private lazy var dataSource = RxTableViewSectionedReloadDataSource<Section>(
-        configureCell: { _, tableView, index, _ in
+        configureCell: { _, tableView, index, item in
             let cell = tableView.dequeueReusableCell(withClass: TopItemCell.self, for: index)
-            cell.textLabel?.text = "test"
+            cell.textLabel?.text = item.title
             return cell
         }
     )
+
+    private func setupViews() {
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+
+    private func bindInput() {
+        tableView.rx.modelSelected(Section.Item.self)
+            .compactMap(\.url)
+            .bind(with: self) { `self`, url in
+                let webView = SFSafariViewController(url: url)
+                self.present(webView, animated: true)
+            }
+            .disposed(by: rx.disposeBag)
+    }
+
+    private func bindOutput() {
+        viewModel.state.items
+            .map { [Section(model: (), items: $0)] }
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: rx.disposeBag)
+    }
 }

@@ -8,6 +8,7 @@
 import RxCocoa
 import RxSwift
 import MoyaSugar
+import ProgressHUD
 
 // MARK: - ViewModel
 
@@ -42,7 +43,11 @@ final class ViewModel {
                 onSuccess: { `self`, items in
                     self.state.items.accept(items)
                 },
-                onFailure: { _, _ in })
+                onFailure: { _, error in
+                    print(error)
+                    ProgressHUD.showFailed(error.localizedDescription)
+                }
+            )
             .disposed(by: bag)
     }
 
